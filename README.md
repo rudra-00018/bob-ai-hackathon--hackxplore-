@@ -8,7 +8,7 @@
 
 | Field | Value |
 |---|---|
-| **Team Name** | EcoVision Innovators |
+| **Team Name** | HACKXPLORE |
 | **Track** | Sustainability |
 | **Team Lead** | Anvi Shah |
 | **Members** | Rudra Ghataliya , Anshika Badala , Margish Sojitra|
