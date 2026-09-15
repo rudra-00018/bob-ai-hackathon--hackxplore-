@@ -9,51 +9,64 @@
 # =============================================================================
 
 team:
-  name: ""                             # REQUIRED — e.g., "Orion Squad"
-  track: ""                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
+  name: "EcoVision Innovators"                   # REQUIRED
+  track: "Sustainability"                         # REQUIRED — one of: AI | DevOps | Sustainability | Open
   lead:
-    name: ""                           # REQUIRED — e.g., "Alice Chen"
-    email: ""                          # REQUIRED — e.g., "alice.chen@ibm.com"
+    name: "Anvi Shah"                             # REQUIRED
+    email: "25aiml063@charusat.edu.in"            # REQUIRED
   members:
-    - name: ""                         # REQUIRED — Team member 1
-      email: ""
-    - name: ""                         # Add more members by copying the two lines above
-      email: ""
-    - name: ""
-      email: ""
+    - name: "Rudra Ghataliya"                     # REQUIRED — Team member 1
+      email: "25aiml015@charusat.edu.in"
+    - name: "Anshika Badala"                      # Team member 2
+      email: "25aiml002@charusat.edu.in"
+    - name: "Margish Sojitra"                     # Team member 3
+      email: "25aiml068@charusat.edu.in"
 
 submission:
-  title: ""                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
+  title: "Eco-Label Vision: AI-Powered Circular Economy Smart Bin Assistant"  # REQUIRED
 
-  problem_statement: >                 # REQUIRED — 1-3 sentences. What problem? Who has it?
-    Replace this text with a concise description of the real-world problem
-    your project addresses and who experiences it.
+  problem_statement: >                            # REQUIRED
+    Improper waste disposal and wish-cycling cause severe contamination in municipal recycling
+    streams, resulting in thousands of tons of recyclable materials ending up in landfills.
+    Everyday consumers lack immediate, actionable guidance on item-specific disposal and plastic
+    resin identification (RIC 1–7) at the point of disposal, while municipalities lack real-time
+    visibility into urban waste segregation patterns.
 
-  solution_summary: >                  # REQUIRED — 1-3 sentences. What did you build?
-    Replace this text with a clear description of your solution
-    and how it addresses the problem above.
+  solution_summary: >                             # REQUIRED
+    Eco-Label Vision is a full-stack smart waste assistant and urban circular economy platform.
+    It uses a MobileNetV3-Small deep learning model trained on the UCI RealWaste dataset alongside
+    EasyOCR resin code detection to instantly classify waste, identify polymer types, calculate
+    CO₂ emissions averted, provide voice-guided disposal instructions, reward eco-positive actions
+    through gamification, and aggregate actionable insights for municipal authorities.
 
-  key_features:                        # REQUIRED — List 3 to 5 specific features you implemented
-    - ""                               # e.g., "Real-time pipeline anomaly detection using watsonx.ai"
-    - ""
-    - ""
-    - ""                               # optional 4th
-    - ""                               # optional 5th
+  key_features:                                   # REQUIRED — 3 to 5 features
+    - "Real-Time AI Waste Classifier: Classifies waste into 9 categories with top-3 confidence scores in ~24ms using MobileNetV3-Small"
+    - "OCR Plastic Resin Code Identifier: Extracts RIC codes (1–7) via EasyOCR to determine exact plastic recyclability and contamination risks"
+    - "Carbon Impact & Voice Guidance: Calculates real-time CO₂ savings per item and reads step-by-step disposal instructions via Web Speech API"
+    - "Circular Gamification Hub: Citizens earn XP, level up, unlock badges, maintain streaks, and play interactive waste mini-games"
+    - "Municipality Intelligence Dashboard: City-wide analytics on recycling rates, waste distribution, carbon milestones, and citizen leaderboards"
 
   tech_stack:
-    languages: []                      # REQUIRED — e.g., ["Python", "TypeScript"]
-    frameworks: []                     # e.g., ["FastAPI", "React"]
-    ibm_technologies: []               # e.g., ["watsonx.ai", "IBM Bob", "IBM Cloud Functions"]
-    databases: []                      # e.g., ["PostgreSQL", "Redis"]
-    other: []                          # e.g., ["Docker", "GitHub Actions", "Slack API"]
+    languages: ["Python 3.10+", "JavaScript (ES6+)", "SQL"]
+    frameworks: ["FastAPI", "React 18", "Vite", "Tailwind CSS", "Framer Motion", "PyTorch", "Uvicorn"]
+    ibm_technologies: ["IBM Bob AI Assistant", "watsonx.ai-ready Model Architecture", "IBM Cloud Deployment Blueprints"]
+    databases: ["SQLite", "SQLAlchemy ORM"]
+    other: ["EasyOCR", "MobileNetV3-Small", "OpenStreetMap / Overpass API", "Google Gemini AI API", "Web Speech API", "Recharts", "React-Leaflet"]
 
-  what_we_are_most_proud_of: >         # Optional but recommended — guides judges to your best work
-    Replace with what aspect of the submission you consider strongest
-    and want judges to pay special attention to.
+  what_we_are_most_proud_of: >
+    Our dual AI pipeline combining MobileNetV3 visual classification with EasyOCR resin code
+    identification overcomes the common pitfall where all plastics look visually similar but have
+    vastly different chemical recyclabilities (e.g., PET #1 vs PVC #3 vs PS #6). We are also
+    proud of the end-to-end behavioral loop that turns mundane waste disposal into an engaging,
+    rewarded habit, and the dual-stakeholder architecture that delivers simultaneous value to
+    individual citizens and municipal policymakers.
 
-  known_limitations: >                 # Optional but recommended — be honest about gaps
-    Replace with any known limitations, incomplete features,
-    or shortcuts taken due to time constraints.
+  known_limitations: >
+    The classifier is optimised for single waste items centred in the camera frame; dense
+    multi-object clutter will require future YOLO-based bounding box segmentation. OCR accuracy
+    drops on transparent or heavily crumpled plastic containers with faint stamped resin logos
+    under poor lighting. IoT weight-sensing smart bin hardware integration is architected in
+    software but currently simulated via browser webcam interactions.
 
 # =============================================================================
 # ARTIFACT LOCATIONS
@@ -63,7 +76,7 @@ artifacts:
   source_code: "src/"
   setup_guide: "docs/setup-guide.md"
   architecture_doc: "docs/architecture.md"
-  demo_video: "demo/demo-video-link.txt"   # URL to hosted video (YouTube, Loom, Box)
-  live_demo: "demo/live-demo-url.txt"      # URL to deployed demo (optional)
+  demo_video: ""
+  live_demo: "https://bob-ai-hackathon-hackxplore.vercel.app/app"
   screenshots: "demo/screenshots/"
   presentation: "presentation/"
