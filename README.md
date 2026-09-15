@@ -148,7 +148,7 @@ python model/train.py --evaluate-only
 | 🌐 **Live Demo** | [Launch Live Demo](https://bob-ai-hackathon-hackxplore.vercel.app/app) |
 | 🎥 **Demo Video** | [Watch Demo Video](https://drive.google.com/file/d/1TF_qmrs0Rro8R1jLPmeRlDpFxTibbigr/view?usp=drivesdk) |
 | 🖼️ **Screenshots** | [View Screenshots Catalog](demo/screenshots/README.md) |
-| 📊 **Presentation Deck** | [presentation/slides.pptx](presentation/slides.pptx) |
+| 📊 **Presentation Deck** | [View Presentation](presentation/hackxplore.pptx) |
 
 ---
 
